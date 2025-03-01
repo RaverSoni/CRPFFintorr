@@ -1,0 +1,29 @@
+.container {
+     width: 850px;
+     height: 200px;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+   }
+   
+   .box {
+     margin-left: 20px;
+     margin-right: 20px;
+     background-color: #16181B;
+     height: 160px;
+     width: 100%;
+     border-radius: 16px;
+     padding: 24px;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   }
+   
+   .title {
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-bottom: 8px;
+   }
+   
+   .content {
+     color: #4A4A4A;
+   }
+   

@@ -1,0 +1,63 @@
+.sidebar {
+     position: sticky;
+     display: flex;
+     flex-direction: column;
+     background-color: #16181B;
+     border-right: #58BAFF 1px solid;
+     height: calc(100vh - 86px);
+     width: 80px; 
+     top: 86px;
+     transition: width 0.3s ease; 
+   }
+   
+   .sidebar.open {
+     width: 200px; 
+     transition: width 0.3s ease;
+   }
+   
+   .hamburger {
+     padding: 10px;
+     margin-left: 15px;
+     cursor: pointer;
+     color: white;
+     font-size: 25px;
+     transition: color 0.3s ease;
+   }
+
+   .hamburger:hover {
+     color: #2563eb;
+   }
+   
+   .menuItems {
+     display: flex;
+     flex-direction: column;
+   }
+   
+   .menuItem {
+     display: flex;
+     align-items: center;
+     margin: 20px 0; 
+   }
+   
+   .sidebarIcon {
+     width: 30px;
+     height: 30px;
+     margin-left: 20px;
+     cursor: pointer;
+     font-size: large;
+    
+   }
+   
+   .menuText {
+     margin-left: 10px; 
+     color: white; 
+     font-size: medium; 
+     transition: color 0.3s ease; 
+   }
+   
+  
+   .menuItem:hover .menuText,
+   .menuItem:hover .sidebarIcon {
+     color: #2563eb; 
+   }
+   

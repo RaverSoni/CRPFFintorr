@@ -1,0 +1,113 @@
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.innerContainer {
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 280px;
+  background: #1c1c1c;
+  color: #ffffff; /* ✅ Ensures all text is white */
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Hover Effects */
+.cardHoverPositive:hover {
+  border: 2px solid #22c55e;
+  box-shadow: 0px 4px 15px rgba(34, 197, 94, 0.4);
+}
+
+.cardHoverNegative:hover {
+  border: 2px solid #ef4444;
+  box-shadow: 0px 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff; /* ✅ Ensures title remains white */
+}
+
+/* ✅ Data Styling */
+.gridContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.colSpan2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.colSpan1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  color: #ffffff; /* ✅ Ensures text color remains white */
+}
+
+.changePositive {
+  color: #22c55e;
+}
+
+.changeNegative {
+  color: #ef4444;
+}
+
+.points {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ✅ Data Section */
+.dataSection {
+  padding: 10px 0;
+}
+
+.contentText {
+  font-size: 14px;
+  color: #ffffff; /* ✅ Ensures labels remain white */
+}
+
+.contentVal {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff; /* ✅ Ensures values remain white */
+}
+
+/* ✅ Loader & Error Styling */
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.errorContainer {
+  color: #ef4444;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}

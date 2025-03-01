@@ -1,0 +1,84 @@
+:root {
+    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+  }
+  
+  body {
+    background: #000;
+    color: #3df1f1;
+    font-family: "Dosis", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 40em;
+  }
+  
+  /* Preloader Container */
+  .preloader {
+    width: 17em;
+    height: 17em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: tiltSpin 8s linear infinite;
+  }
+  
+  /* Rings */
+  .preloader__ring {
+    font-size: 2em;
+    position: relative;
+    height: 3rem;
+    width: 1.5rem;
+    transform-style: preserve-3d;
+    animation: spin 4s linear infinite;
+  }
+  
+  .preloader__ring:nth-child(even) {
+    animation-direction: reverse;
+  }
+  
+  /* Ring Sectors */
+  .preloader__sector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .preloader__sector:empty::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 45%, currentColor 45% 55%, transparent 55%);
+  }
+  
+  .preloader__sector:nth-child(n) {
+    transform: rotateY(calc(360deg / 30 * var(--sector-index))) translateZ(7rem);
+  }
+  
+  /* Animations */
+  @keyframes tiltSpin {
+    from {
+      transform: rotateY(0) rotateX(30deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(30deg);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
